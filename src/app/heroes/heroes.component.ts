@@ -2,6 +2,7 @@ import { NgFor, UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { HEROES } from '../mock-heroes';
+import { Hero } from '../hero';
 
 @Component({
   selector: 'app-heroes',
@@ -12,4 +13,9 @@ import { HEROES } from '../mock-heroes';
 })
 export class HeroesComponent {
   heroes = HEROES
+  selectedHero?: Hero;
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
 }
