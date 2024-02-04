@@ -1,15 +1,20 @@
-<h2 class="text-center  text-gray-800 font-bold text-xl my-3"> My Heroes </h2>
+<h2 class="text-center  text-gray-800 font-bold text-xl my-3">My Heroes</h2>
 
-<ul class="heroes grid grid-cols-3 gap-6">
-    <div *ngFor="let hero of heroes" class="shadow-lg rounded mt-2 p-8 bg-gray-100">
-        <div class="flex items-center mb-2">
+<div class="heroes grid grid-cols-3 gap-6">
+    <div *ngFor="let hero of heroes" class="shadow-lg rounded mt-2 p-6 bg-gray-100">
+        <div class="flex items-center">
             <h3 class="text-gray-700 font-bold text-l grow">{{hero.name | uppercase}} Details</h3>
-            <button class="text-sm font-bold bg-indigo-500 p-2 text-gray-100 rounded">{{ "select" | uppercase}}</button>
-        </div>
-        <div><span>id: </span>{{hero.id}}</div>
-        <div>
-            <label for="name">Hero name: </label>
-            <input class="rounded border-2 px-1" id="name" [(ngModel)]="hero.name" placeholder="name">
+            <button class="ml-3 text-sm font-bold bg-indigo-500 p-2 text-gray-100 rounded" (click)="onSelect(hero)">{{
+                "select" | uppercase}}</button>
         </div>
     </div>
-</ul>
+</div>
+
+<div class="my-12 flex flex-col w-128 place-self-center" *ngIf="selectedHero">
+    <h2 class="font-bold">{{selectedHero.name | uppercase}} Details</h2>
+    <div>id: {{selectedHero.id}}</div>
+    <div class="flex">
+        <label for="hero-name" class="text-nowrap ">Hero name:</label>
+        <input class="ml-3 rounded border-2 px-1" id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+</div>
