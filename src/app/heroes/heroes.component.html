@@ -1,7 +1,7 @@
 <h2 class="text-center  text-gray-800 font-bold text-xl my-3">My Heroes</h2>
 
 <div class="heroes grid grid-cols-3 gap-6">
-    <div *ngFor="let hero of heroes" class="shadow-lg rounded mt-2 p-6 bg-gray-100">
+    <div *ngFor="let hero of heroes" class="hover:shadow-xl shadow-md rounded mt-2 p-6 bg-gray-100">
         <div class="flex items-center">
             <h3 class="text-gray-700 font-bold text-l grow">{{hero.name | uppercase}} Details</h3>
             <button class="ml-3 text-sm font-bold bg-indigo-500 p-2 text-gray-100 rounded" (click)="onSelect(hero)">{{

@@ -3,5 +3,5 @@
 - [ ] add pre-commit hook
 
 ## 02-03
-- [ ] card hover effect
+- [x] card hover effect
 - [x] select one hero
