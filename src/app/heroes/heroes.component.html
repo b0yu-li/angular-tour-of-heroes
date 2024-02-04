@@ -4,8 +4,10 @@
     <div *ngFor="let hero of heroes" class="hover:shadow-xl shadow-md rounded mt-2 p-6 bg-gray-100">
         <div class="flex items-center">
             <h3 class="text-gray-700 font-bold text-l grow">{{hero.name | uppercase}} Details</h3>
-            <button class="ml-3 text-sm font-bold bg-indigo-500 p-2 text-gray-100 rounded" (click)="onSelect(hero)">{{
-                "select" | uppercase}}</button>
+            <button class="ml-3 text-sm font-bold bg-indigo-500 p-2 text-gray-100 rounded"
+                [ngClass]="{'bg-green-400 text-indigo-500': hero === selectedHero}" (click)="onSelect(hero)">
+                {{ renderSelectBtn(hero) }}
+            </button>
         </div>
     </div>
 </div>

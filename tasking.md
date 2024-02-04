@@ -1,5 +1,6 @@
 ## 02-04
 - [x] push to GitHub repo
+- [x] card selected visual cue
 - [ ] add pre-commit hook
 
 ## 02-03
