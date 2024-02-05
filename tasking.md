@@ -1,4 +1,8 @@
+## 02-06
+- [ ] incorporate msg component
+
 ## 02-05
+- [x] use hero service
 - [x] extract hero detail component
 
 ## 02-04
