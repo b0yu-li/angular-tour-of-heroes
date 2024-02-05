@@ -1,0 +1,9 @@
+<div class="p-6 flex flex-col shadow-lg rounded bg-indigo-500" *ngIf="hero">
+    <h2 class="font-bold text-gray-100 mb-3">{{hero.name | uppercase}} Details</h2>
+    <div class="text-gray-100">id: {{hero.id}}</div>
+    <div class="flex">
+        <label for="hero-name" class="text-nowrap text-gray-100">Hero name:</label>
+        <input class="ml-3 rounded border-2 px-1 text-indigo-500" id="hero-name" [(ngModel)]="hero.name"
+            placeholder="name">
+    </div>
+</div>

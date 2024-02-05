@@ -12,12 +12,4 @@
     </div>
 </div>
 
-<div class="my-12 p-6 flex flex-col w-128 place-self-center shadow-lg rounded bg-indigo-500" *ngIf="selectedHero">
-    <h2 class="font-bold text-gray-100 mb-3">{{selectedHero.name | uppercase}} Details</h2>
-    <div class="text-gray-100">id: {{selectedHero.id}}</div>
-    <div class="flex">
-        <label for="hero-name" class="text-nowrap text-gray-100">Hero name:</label>
-        <input class="ml-3 rounded border-2 px-1 text-indigo-500" id="hero-name" [(ngModel)]="selectedHero.name"
-            placeholder="name">
-    </div>
-</div>
+<app-hero-detail class="my-12 w-128 place-self-center" [hero]="selectedHero"></app-hero-detail>

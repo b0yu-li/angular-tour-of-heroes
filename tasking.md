@@ -1,3 +1,6 @@
+## 02-05
+- [x] extract hero detail component
+
 ## 02-04
 - [x] push to GitHub repo
 - [x] card selected visual cue
