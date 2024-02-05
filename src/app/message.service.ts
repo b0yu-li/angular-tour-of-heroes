@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { measureMemory } from 'vm';
 
 @Injectable({
   providedIn: 'root'
