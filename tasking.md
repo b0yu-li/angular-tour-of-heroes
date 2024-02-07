@@ -1,5 +1,5 @@
 ## 02-07
-- [ ] xxx
+- [x] incorporate navigation
 
 ## 02-06
 - [x] incorporate msg component
