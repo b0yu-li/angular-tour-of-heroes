@@ -1,3 +1,7 @@
+## 02-08
+- [ ] build dashbaord component
+- [ ] build heroes navigation
+
 ## 02-07
 - [x] incorporate navigation
 
