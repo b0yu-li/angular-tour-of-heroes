@@ -1,5 +1,8 @@
+## 02-07
+- [ ] xxx
+
 ## 02-06
-- [ ] incorporate msg component
+- [x] incorporate msg component
 
 ## 02-05
 - [x] use hero service
