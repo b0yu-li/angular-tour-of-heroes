@@ -1,5 +1,6 @@
 ## 02-10
-- [ ] xxx
+- [x] decorate `dashboard` component
+- [ ] decorate message component
 
 ## 02-08
 - [ ] build dashbaord component

@@ -1,6 +1,6 @@
-<h2>Top Heroes</h2>
-<div class="">
-  <a *ngFor="let hero of heroes">
-    {{hero.name}}
-  </a>
+<h2 class="mb-3 text-center text-gray-800 font-bold text-xl">Top Heroes</h2>
+<div class="flex gap-3 justify-center">
+    <div class="shadow-md bg-indigo-500 text-gray-100 font-bold p-2 pt-3 rounded" *ngFor="let hero of heroes">
+        <a href=""> {{hero.name | uppercase}} </a>
+    </div>
 </div>
