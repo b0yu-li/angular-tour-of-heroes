@@ -1,3 +1,6 @@
+## 02-12
+- [ ] xxx
+
 ## 02-10
 - [x] decorate `dashboard` component
 - [ ] decorate message component
