@@ -1,7 +1,7 @@
 ## 02-13
 - [x] "Tour of Heroes" make it a route link since it's underlined
 - [ ] hero detail has upper margin w/ heroes list
-- [ ] adjust upper margin of "Top Heroes"
+- [x] adjust upper margin of "Top Heroes"
 
 ## 02-12
 - [x] extract Dashboard & Heroes router links
