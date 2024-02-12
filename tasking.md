@@ -1,6 +1,7 @@
 ## 02-13
 - [x] "Tour of Heroes" make it a route link since it's underlined
-- [ ] hero detail has upper margin w/ heroes list
+- [x] hero detail has upper margin w/ heroes list
+- [ ] hero detail width, and w/ media query enabled
 - [x] adjust upper margin of "Top Heroes"
 
 ## 02-12
