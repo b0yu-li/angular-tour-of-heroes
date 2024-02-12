@@ -1,9 +1,12 @@
+## 02-13
+- [ ] Tour of Heroes make it a route link since it's underlined
+
 ## 02-12
 - [x] extract Dashboard & Heroes router links
 
 ## 02-10
 - [x] decorate `dashboard` component
-- [ ] decorate message component
+- [x] decorate message component
 
 ## 02-08
 - [x] build dashbaord component
