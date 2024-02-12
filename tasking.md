@@ -1,5 +1,5 @@
 ## 02-12
-- [ ] xxx
+- [x] extract Dashboard & Heroes router links
 
 ## 02-10
 - [x] decorate `dashboard` component

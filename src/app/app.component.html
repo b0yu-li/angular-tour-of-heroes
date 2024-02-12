@@ -2,8 +2,8 @@
 
 <div class="p-6">
     <nav class="flex gap-3 justify-center">
-        <a class="font-bold text-xl text-gray-100 p-2 bg-indigo-500 rounded" routerLink="/dashboard">Dashboard</a>
-        <a class="font-bold text-xl text-gray-100 p-2 bg-indigo-500 rounded" routerLink="/heroes">Heroes</a>
+        <a class="font-bold text-xl text-gray-100 p-2 bg-indigo-500 rounded" *ngFor="let link of navLinks"
+            routerLink="{{link.link}}">{{link.linkName}}</a>
     </nav>
     <router-outlet />
 </div>
