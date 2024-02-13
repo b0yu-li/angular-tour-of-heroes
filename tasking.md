@@ -3,7 +3,7 @@
 - [x] "Tour of Heroes" make it a route link since it's underlined
 - [x] hero detail has upper margin w/ heroes list
 - [x] center hero detail, solution: add a container div
-- [ ] hero detail width, and w/ media query enabled
+- [x] hero detail width, and w/ media query enabled
 - [x] adjust upper margin of "Top Heroes"
 
 ## 02-12
