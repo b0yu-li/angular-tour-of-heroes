@@ -13,7 +13,7 @@ import { HeroService } from '../hero.service';
   styleUrl: './hero-detail.component.sass'
 })
 export class HeroDetailComponent {
-  @Input() hero?: Hero;
+  hero?: Hero;
 
   constructor(
     private route: ActivatedRoute,
