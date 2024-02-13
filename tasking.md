@@ -1,4 +1,6 @@
 ## 02-13
+- [ ] re-design top nav portion
+- [x] hero detail go back button
 - [x] from heroes, could click into hero detail
 - [x] "Tour of Heroes" make it a route link since it's underlined
 - [x] hero detail has upper margin w/ heroes list

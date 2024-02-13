@@ -1,4 +1,4 @@
-import { NgClass, NgIf, UpperCasePipe } from '@angular/common';
+import { Location, NgClass, NgIf, UpperCasePipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
@@ -17,7 +17,8 @@ export class HeroDetailComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private heroService: HeroService
+    private heroService: HeroService,
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -28,5 +29,9 @@ export class HeroDetailComponent {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
+  }
+
+  goBack() {
+    this.location.back();
   }
 }
