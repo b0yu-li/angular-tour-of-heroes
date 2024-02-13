@@ -1,4 +1,4 @@
-<div class="p-6 rounded bg-zinc-100" *ngIf="messageService.messages.length">
+<div class="p-6 rounded bg-zinc-100 overflow-y-auto h-48 " *ngIf="messageService.messages.length">
     <div class="mb-2 flex gap-3 justify-start">
         <h2 class="font-semibold">Messages</h2>
         <button type="button" class="text-sm underline" (click)="messageService.clear()">Clear messages</button>

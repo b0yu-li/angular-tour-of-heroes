@@ -1,6 +1,6 @@
 ## 02-13
 - [ ] re-design top nav portion
-- [ ] when message component gets too long, it could overflow
+- [x] when message component gets too long, it could overflow
 - [x] message component stays at the bottom
 - [x] hero detail go back button
 - [x] from heroes, could click into hero detail
