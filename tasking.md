@@ -1,4 +1,5 @@
 ## 02-13
+- [x] from heroes, could click into hero detail
 - [x] "Tour of Heroes" make it a route link since it's underlined
 - [x] hero detail has upper margin w/ heroes list
 - [ ] hero detail width, and w/ media query enabled
