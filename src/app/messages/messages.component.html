@@ -4,5 +4,6 @@
         <h2 class="font-semibold">Messages</h2>
         <button type="button" class="text-sm underline" (click)="messageService.clear()">Clear messages</button>
     </div>
-    <p class="text-sm text-gray-500" *ngFor='let message of messageService.messages'> {{message}} </p>
+    <p class="text-sm text-gray-500 {{highlightError(message)}}" *ngFor='let message of messageService.messages'>
+        {{message}} </p>
 </div>

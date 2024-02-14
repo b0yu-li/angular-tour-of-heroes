@@ -1,6 +1,6 @@
 ## 02-14
 - [ ] refactor: move all services to service dir
-- [ ] if contains 'failure', highlight log message
+- [x] if contains 'failure', highlight log message
 - [x] tab should be in selected status
 - [x] extract nav component
 - [x] frosted glass effect for message component

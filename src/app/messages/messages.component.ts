@@ -13,4 +13,11 @@ export class MessagesComponent {
   // Q: how come this is a public access?
   // A: since component has to access this message service, that's why
   constructor(public messageService: MessageService) { }
+
+  highlightError(msg: string): string {
+    if (msg.includes('failure')) {
+      return 'text-red-800'
+    }
+    return '';
+  }
 }
