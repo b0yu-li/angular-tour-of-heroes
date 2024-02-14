@@ -7,6 +7,15 @@
             <button class="bg-indigo-500 text-gray-100 ml-3 text-sm font-bold p-2 rounded" (click)="onSelect(hero)">
                 {{ 'select' | uppercase }}
             </button>
+            <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button>
         </div>
+    </div>
+
+    <div>
+        <label for="new-hero">Hero name: </label>
+        <input id="new-hero" #heroName />
+        <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+            Add hero
+        </button>
     </div>
 </div>
