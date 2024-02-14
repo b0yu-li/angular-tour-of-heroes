@@ -1,5 +1,11 @@
+## 02-14
+- [ ] tab should be in selected status
+- [ ] frosted glass effect for message component
+- [ ] frosted glass effect for nav component
+
 ## 02-13
-- [ ] re-design top nav portion
+- [ ] Get data from a server
+- [x] re-design top nav portion
 - [x] when message component gets too long, it could overflow
 - [x] message component stays at the bottom
 - [x] hero detail go back button

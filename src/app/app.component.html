@@ -1,10 +1,12 @@
-<h1 class="mt-6 text-3xl font-bold underline text-center cursor-pointer" routerLink="/">{{title}}</h1>
-
-<div class="p-6">
+<div class="flex justify-between mx-6 px-6 py-3 bg-white/80 backdrop-blur-xl rounded-br-lg rounded-bl-lg">
+    <h1 class="text-indigo-500 text-[1.875rem] font-bold text-center cursor-pointer" routerLink="/">{{title}}</h1>
     <nav class="flex gap-3 justify-center">
-        <a class="font-bold text-xl text-gray-100 p-2 bg-indigo-500 rounded" *ngFor="let link of navLinks"
+        <a class="font-semibold text-lg text-gray-100 p-2 bg-indigo-500 rounded" *ngFor="let link of navLinks"
             routerLink="{{link.link}}">{{link.linkName}}</a>
     </nav>
+</div>
+
+<div class="p-6">
     <router-outlet />
 </div>
 
