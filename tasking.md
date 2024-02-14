@@ -1,5 +1,6 @@
 ## 02-14
 - [ ] tab should be in selected status
+- [x] extract nav component
 - [x] frosted glass effect for message component
 - [x] frosted glass effect for nav component
 
