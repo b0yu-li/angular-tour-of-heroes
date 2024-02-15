@@ -2,14 +2,15 @@ import { NgFor, UpperCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Hero } from '../hero';
+import { HeroSearchComponent } from "../hero-search/hero-search.component";
 import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [NgFor, UpperCasePipe, RouterModule],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.sass'
+  styleUrl: './dashboard.component.sass',
+  imports: [NgFor, UpperCasePipe, RouterModule, HeroSearchComponent]
 })
 export class DashboardComponent {
   heroes: Hero[] = [];
