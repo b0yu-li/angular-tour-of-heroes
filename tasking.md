@@ -1,3 +1,6 @@
+## 02-15
+- [ ] could search hero
+
 ## 02-14
 - [ ] refactor: move all services to service dir
 - [x] if contains 'failure', highlight log message
