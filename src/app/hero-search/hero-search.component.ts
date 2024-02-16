@@ -1,8 +1,9 @@
 import { AsyncPipe, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, Subject, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-hero-search',
@@ -11,11 +12,27 @@ import { Hero } from '../hero';
   templateUrl: './hero-search.component.html',
   styleUrl: './hero-search.component.sass'
 })
-export class HeroSearchComponent {
+export class HeroSearchComponent implements OnInit {
   heroes$!: Observable<Hero[]>;
+  private searchTerms = new Subject<string>();
 
-  search(arg0: string) {
-    throw new Error('Method not implemented.');
+  constructor(private heroService: HeroService) { }
+
+  search(term: string): void {
+    this.searchTerms.next(term);
   }
 
+  ngOnInit(): void {
+    this.heroes$ = this.searchTerms
+      .pipe(
+        // wait 300ms after each keystroke before considering the term
+        debounceTime(300),
+
+        // ignore new term if same as previous term
+        distinctUntilChanged(),
+
+        // switch to new search observable each time the term changes
+        switchMap((term: string) => this.heroService.searchHeroes(term)),
+      );
+  }
 }
