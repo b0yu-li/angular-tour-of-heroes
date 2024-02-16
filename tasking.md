@@ -10,7 +10,7 @@
 - [x] frosted glass effect for nav component
 
 ## 02-13
-- [ ] Get data from a server
+- [x] Get data from a server
 - [x] re-design top nav portion
 - [x] when message component gets too long, it could overflow
 - [x] message component stays at the bottom
@@ -51,3 +51,6 @@
 ## 02-03
 - [x] card hover effect
 - [x] select one hero
+
+## backlog
+- [ ] remove warning: Angular detected that `HttpClient` is not configured to use `fetch` APIs. It's strongly recommended to enable `fetch` for applications that use Server-Side Rendering for better performance and compatibility. To enable `fetch`, add the `withFetch()` to the `provideHttpClient()` call at the root of the application.
