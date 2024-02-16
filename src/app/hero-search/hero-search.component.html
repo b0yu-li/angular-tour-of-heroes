@@ -1,5 +1,6 @@
 <div id="search-component">
     <label for="search-box">Hero Search</label>
+    <!-- The #searchBox is an Angular template reference variable. It allows you to reference this input element in your Angular component code. -->
     <input #searchBox id="search-box" (input)="search(searchBox.value)" />
 
     <ul class="search-result">
