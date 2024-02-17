@@ -16,6 +16,7 @@ import { MessageService } from '../message.service';
 })
 export class HeroesComponent {
   heroes: Hero[] = [];
+  private hoverId: number | null = null;
 
   constructor(
     private router: Router,
@@ -29,6 +30,23 @@ export class HeroesComponent {
   getHeroes(): void {
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes)
+  }
+
+  mouseHover($event: MouseEvent, id: number) {
+    this.messageService.add(`HeroesComponent: mouse event=${$event}, hero id=${id}`);
+    this.hoverId = id;
+  }
+
+  leaveHover() {
+    this.messageService.add(`HeroesComponent: leave hover`);
+    this.hoverId = null;
+  }
+
+  getDeleteBtnClass(id: number): string {
+    if (id === this.hoverId) {
+      return "opacity-100";
+    }
+    return "";
   }
 
   onSelect(hero: Hero): void {
