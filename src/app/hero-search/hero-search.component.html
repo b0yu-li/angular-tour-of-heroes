@@ -1,7 +1,18 @@
 <div id="search-component">
-    <label for="search-box">Hero Search</label>
-    <!-- The #searchBox is an Angular template reference variable. It allows you to reference this input element in your Angular component code. -->
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+    <div class="relative">
+        <div class="absolute left-1 flex flex-col h-full">
+            <div class="grow"></div>
+            <svg class="z-10 text-slate-400 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd" />
+            </svg>
+            <div class="grow"></div>
+        </div>
+        <input #searchBox id="search-box" placeholder="Search hero" (input)="search(searchBox.value)"
+            class="w-40 rounded px-2 pl-7 py-2 bg-indigo-100 bg-opacity-30 backdrop-blur-lg text-indigo-500" />
+    </div>
 
     <ul class="search-result">
         <li *ngFor="let hero of heroes$ | async">

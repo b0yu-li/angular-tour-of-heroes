@@ -1,8 +1,12 @@
 <div
-    class="flex justify-between mx-6 px-6 py-3 bg-white bg-opacity-30 backdrop-blur-lg rounded-br-lg rounded-bl-lg drop-shadow-lg">
-    <h1 class="text-indigo-500 text-[1.875rem] font-bold text-center cursor-pointer" routerLink="/">{{title}}</h1>
-    <nav class="flex gap-3 justify-center">
-        <a class="font-semibold text-lg p-2 rounded {{getClass(link)}}" *ngFor="let link of navLinks"
-            routerLink="{{link.link}}">{{link.linkName}}</a>
-    </nav>
+    class="flex justify-between mx-6 px-6 py-3 bg-indigo-800 bg-opacity-60 backdrop-blur-lg rounded-br-lg rounded-bl-lg drop-shadow-lg">
+    <h1 class="text-gray-100 text-[1.5rem] font-semibold text-center cursor-pointer" routerLink="/">{{title | uppercase }}</h1>
+
+    <div class="flex gap-6 items-center">
+        <app-hero-search></app-hero-search>
+        <nav class="flex gap-3 justify-center">
+            <a class="font-semibold text-md p-2 rounded {{getClass(link)}}" *ngFor="let link of navLinks"
+                routerLink="{{link.link}}">{{link.linkName}}</a>
+        </nav>
+    </div>
 </div>

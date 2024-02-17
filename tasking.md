@@ -1,9 +1,12 @@
+## 02-18
+- [ ] search result should be of upper overlay
+
 ## 02-17
 - [x] delete button appears only when hovering a card
 - [x] decorate delete button
 - [x] decorate add hero card
 - [x] latest message should appear on the top
-- [ ] decorate search UI
+- [x] decorate search UI (it should be on the nav bar)
 - [ ] decorate hero detail card UI
 
 ## 02-15
