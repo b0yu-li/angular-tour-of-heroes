@@ -1,8 +1,12 @@
+## 02-17
+- [ ] decorate delete button
+- [ ] decorate add hero card
+
 ## 02-15
 - [ ] could search hero
 
 ## 02-14
-- [ ] refactor: move all services to service dir
+- [ ] refactor: move all services to service dir 
 - [x] if contains 'failure', highlight log message
 - [x] tab should be in selected status
 - [x] extract nav component
