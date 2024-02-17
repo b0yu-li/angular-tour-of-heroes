@@ -1,5 +1,6 @@
 ## 02-17
-- [ ] decorate delete button
+- [ ] delete button appears only when hovering a card
+- [x] decorate delete button
 - [ ] decorate add hero card
 
 ## 02-15
