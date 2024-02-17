@@ -2,12 +2,14 @@
 - [x] delete button appears only when hovering a card
 - [x] decorate delete button
 - [ ] decorate add hero card
+- [ ] latest message should appear on the top
+- [ ] decorate search UI
 
 ## 02-15
 - [ ] could search hero
 
 ## 02-14
-- [ ] refactor: move all services to service dir 
+- [x] refactor: move all services to service dir 
 - [x] if contains 'failure', highlight log message
 - [x] tab should be in selected status
 - [x] extract nav component

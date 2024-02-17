@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { routes } from './app.routes';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './service/in-memory-data.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [

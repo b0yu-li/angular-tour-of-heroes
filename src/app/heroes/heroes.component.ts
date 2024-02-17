@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { Router } from '@angular/router';
 import { Hero } from '../hero';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
-import { HeroService } from '../hero.service';
-import { MessageService } from '../message.service';
+import { HeroService } from '../service/hero.service';
+import { MessageService } from '../service/message.service';
 
 @Component({
   selector: 'app-heroes',
