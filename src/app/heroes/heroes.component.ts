@@ -33,12 +33,10 @@ export class HeroesComponent {
   }
 
   mouseHover($event: MouseEvent, id: number) {
-    this.messageService.add(`HeroesComponent: mouse event=${$event}, hero id=${id}`);
     this.hoverId = id;
   }
 
   leaveHover() {
-    this.messageService.add(`HeroesComponent: leave hover`);
     this.hoverId = null;
   }
 
