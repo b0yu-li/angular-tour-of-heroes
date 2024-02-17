@@ -2,7 +2,7 @@
 - [x] delete button appears only when hovering a card
 - [x] decorate delete button
 - [ ] decorate add hero card
-- [ ] latest message should appear on the top
+- [x] latest message should appear on the top
 - [ ] decorate search UI
 
 ## 02-15
@@ -60,4 +60,5 @@
 - [x] select one hero
 
 ## backlog
+- [ ] different levels of log, and user could filter logs
 - [ ] remove warning: Angular detected that `HttpClient` is not configured to use `fetch` APIs. It's strongly recommended to enable `fetch` for applications that use Server-Side Rendering for better performance and compatibility. To enable `fetch`, add the `withFetch()` to the `provideHttpClient()` call at the root of the application.
