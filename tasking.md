@@ -4,9 +4,10 @@
 - [x] decorate add hero card
 - [x] latest message should appear on the top
 - [ ] decorate search UI
+- [ ] decorate hero detail card UI
 
 ## 02-15
-- [ ] could search hero
+- [x] could search hero
 
 ## 02-14
 - [x] refactor: move all services to service dir 
