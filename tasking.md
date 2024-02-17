@@ -1,7 +1,7 @@
 ## 02-17
 - [x] delete button appears only when hovering a card
 - [x] decorate delete button
-- [ ] decorate add hero card
+- [x] decorate add hero card
 - [x] latest message should appear on the top
 - [ ] decorate search UI
 

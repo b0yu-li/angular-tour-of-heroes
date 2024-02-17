@@ -4,7 +4,7 @@
     <div *ngFor="let hero of heroes" class="relative hover:shadow-xl shadow-md rounded p-6 bg-gray-100"
         (mouseenter)="mouseHover($event, hero.id)" (mouseleave)="leaveHover()">
         <div class="flex items-center">
-            <h3 class="text-gray-700 font-bold text-l grow">{{hero.name | uppercase}} Details</h3>
+            <h3 class="text-gray-700 font-bold grow">{{hero.name | uppercase}} Details</h3>
             <button class="bg-indigo-500 text-gray-100 ml-3 text-sm font-bold p-2 rounded" (click)="onSelect(hero)">
                 {{ 'select' | uppercase }}
             </button>
@@ -14,10 +14,11 @@
         </div>
     </div>
 
-    <div>
-        <label for="new-hero">Hero name: </label>
-        <input id="new-hero" #heroName />
-        <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
+    <div class="flex items-center hover:shadow-xl shadow-md rounded p-6 bg-gray-100">
+        <label for="new-hero" class="text-gray-700 font-bold">Hero name: </label>
+        <input id="new-hero" #heroName class="ml-3 grow rounded border-2 px-1 text-indigo-500" />
+        <button type="button" class="add-button bg-indigo-500 text-gray-100 ml-3 text-sm font-bold p-2 rounded"
+            (click)="add(heroName.value); heroName.value=''">
             Add hero
         </button>
     </div>
