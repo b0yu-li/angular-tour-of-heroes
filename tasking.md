@@ -1,7 +1,6 @@
 ## 02-18
 - [x] fix the h1 title was a little off the center (towards the upper side)
 - [ ] search result should be of upper overlay
-- [ ] h1 bring "tour of heroes" down to its baseline
 
 ## 02-17
 - [x] delete button appears only when hovering a card
