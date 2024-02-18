@@ -1,6 +1,7 @@
 ## 02-18
 - [x] fix the h1 title was a little off the center (towards the upper side)
-- [ ] search result should be of upper overlay
+- [x] search result should be of upper overlay
+- [ ] could nav to the search result item
 
 ## 02-17
 - [x] delete button appears only when hovering a card
