@@ -1,7 +1,10 @@
+## 02-19
+- [ ] decorate search pop-over in an un-detailed fashion
+
 ## 02-18
 - [x] fix the h1 title was a little off the center (towards the upper side)
 - [x] search result should be of upper overlay
-- [ ] could nav to the search result item
+- [x] could nav to the search result item
 
 ## 02-17
 - [x] delete button appears only when hovering a card
