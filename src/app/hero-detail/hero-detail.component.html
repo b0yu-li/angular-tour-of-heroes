@@ -7,11 +7,13 @@
             <button class="text-gray-100 underline" type="button" (click)="goBack()">go back</button>
         </div>
         <div class="text-gray-100">id: {{hero.id}}</div>
-        <div class="flex">
-            <label for="hero-name" class="text-gray-100">Hero name:</label>
-            <input class="max-w-40 ml-3 rounded border-2 px-1 text-indigo-500" id="hero-name" [(ngModel)]="hero.name"
-                placeholder="name">
-            <button class="text-indigo-500 bg-gray-100 ml-3 font-bold p-2 rounded" type="button"
+        <div class="flex justify-between">
+            <div class="flex items-center">
+                <label for="hero-name" class="text-gray-100">Hero name:</label>
+                <input class="max-w-40 ml-3 rounded border-2 px-1 py-1 text-indigo-500" id="hero-name"
+                    [(ngModel)]="hero.name" placeholder="name">
+            </div>
+            <button class="text-indigo-500 bg-gray-100 font-bold py-1 px-2 rounded" type="button"
                 (click)="save()">save</button>
         </div>
     </div>

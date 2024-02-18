@@ -8,7 +8,7 @@
 - [x] decorate add hero card
 - [x] latest message should appear on the top
 - [x] decorate search UI (it should be on the nav bar)
-- [ ] decorate hero detail card UI
+- [x] decorate hero detail card UI
 
 ## 02-15
 - [x] could search hero
