@@ -1,5 +1,12 @@
 ## 02-19
-- [ ] decorate search pop-over in an un-detailed fashion
+- [x] decorate search pop-over in an un-detailed fashion
+- [ ] conditionally show search result
+- [ ] fix: search result should overlay heroes tab
+- [ ] search result hover effect
+- [ ] search result after clicking: clear search input
+- [ ] after clicking clear message, should not make message component disappear
+- [ ] delete confirmation
+- [ ] fix: duplicate log messages
 
 ## 02-18
 - [x] fix the h1 title was a little off the center (towards the upper side)
