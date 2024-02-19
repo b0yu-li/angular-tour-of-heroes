@@ -1,7 +1,7 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Observable, Subject, debounceTime, distinctUntilChanged, map, switchMap } from 'rxjs';
+import { Observable, Subject, debounceTime, distinctUntilChanged, map, of, switchMap } from 'rxjs';
 import { Hero } from '../hero';
 import { HeroService } from '../service/hero.service';
 
@@ -34,22 +34,20 @@ export class HeroSearchComponent implements OnInit {
 
         // switch to new search observable each time the term changes
         switchMap((term: string) => {
-          console.log(`1st pipe term: ${term}`);
+          console.log(`1st switchMap term: ${term}`);
           return this.heroService.searchHeroes(term)
         }),
       );
 
-    this.isSearchInputPresent$ = this.searchTerms.asObservable()
-      .pipe(
-        distinctUntilChanged(),
-        map((term: string) => {
-          console.log(`2nd pipe term: ${term}`);
-
-          if (term.length > 0 && this.heroes$) {
-            return true;
-          }
-          return false;
-        })
-      )
+    this.isSearchInputPresent$ = this.heroes$.pipe(
+      switchMap(heroes => {
+        if (heroes.length === 0) {
+          console.log(`isSearchInputPresent$: false`);
+          return of(false);
+        }
+        console.log(`isSearchInputPresent$: true`);
+        return of(true);
+      })
+    );
   }
 }
