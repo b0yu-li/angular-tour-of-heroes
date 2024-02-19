@@ -3,7 +3,7 @@
 - [x] conditionally show search result
     - took me a long time
     - solution: 1. [class.hidden]="!showResults" over *ngIf; 2. tap Observerble to
-- [ ] fix: search result should overlay heroes tab
+- [x] fix: search result should overlay heroes tab
 - [ ] search result hover effect
 - [ ] search result after clicking: clear search input
 - [ ] after clicking clear message, should not make message component disappear
