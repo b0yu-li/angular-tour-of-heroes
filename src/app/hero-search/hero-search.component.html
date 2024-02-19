@@ -14,8 +14,8 @@
             class="w-40 rounded px-2 pl-7 py-2 bg-indigo-100 bg-opacity-30 backdrop-blur-lg text-indigo-500" />
     </div>
 
-    <ul
-        class="search-result z-20 absolute top-12 inset-x-0 rounded bg-indigo-200 bg-opacity-30 backdrop-blur-lg py-3 pl-7 flex flex-col gap-2">
+    <ul class="search-result z-20 absolute top-12 inset-x-0 rounded bg-indigo-200 bg-opacity-30 backdrop-blur-lg py-3 pl-7 flex flex-col gap-2"
+        *ngIf="isSearchInputPresent$ | async">
         <li *ngFor="let hero of heroes$ | async">
             <a routerLink="/detail/{{hero.id}}" class="text-indigo-400 font-semibold hover:underline">
                 {{hero.name}}

@@ -1,19 +1,20 @@
-import { AsyncPipe, NgFor } from '@angular/common';
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Observable, Subject, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
+import { Observable, Subject, debounceTime, distinctUntilChanged, map, switchMap } from 'rxjs';
 import { Hero } from '../hero';
 import { HeroService } from '../service/hero.service';
 
 @Component({
   selector: 'app-hero-search',
   standalone: true,
-  imports: [NgFor, RouterModule, AsyncPipe],
+  imports: [NgFor, RouterModule, AsyncPipe, NgIf],
   templateUrl: './hero-search.component.html',
   styleUrl: './hero-search.component.sass'
 })
 export class HeroSearchComponent implements OnInit {
   heroes$!: Observable<Hero[]>;
+  isSearchInputPresent$!: Observable<boolean>;
   private searchTerms = new Subject<string>();
 
   constructor(private heroService: HeroService) { }
@@ -23,7 +24,7 @@ export class HeroSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.heroes$ = this.searchTerms
+    this.heroes$ = this.searchTerms.asObservable()
       .pipe(
         // wait 300ms after each keystroke before considering the term
         debounceTime(300),
@@ -32,7 +33,23 @@ export class HeroSearchComponent implements OnInit {
         distinctUntilChanged(),
 
         // switch to new search observable each time the term changes
-        switchMap((term: string) => this.heroService.searchHeroes(term)),
+        switchMap((term: string) => {
+          console.log(`1st pipe term: ${term}`);
+          return this.heroService.searchHeroes(term)
+        }),
       );
+
+    this.isSearchInputPresent$ = this.searchTerms.asObservable()
+      .pipe(
+        distinctUntilChanged(),
+        map((term: string) => {
+          console.log(`2nd pipe term: ${term}`);
+
+          if (term.length > 0 && this.heroes$) {
+            return true;
+          }
+          return false;
+        })
+      )
   }
 }
