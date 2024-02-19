@@ -34,7 +34,6 @@ export class HeroSearchComponent implements OnInit {
 
         // switch to new search observable each time the term changes
         switchMap((term: string) => {
-          console.log(`1st switchMap term: ${term}`);
           return this.heroService.searchHeroes(term)
         }),
       );
@@ -42,7 +41,6 @@ export class HeroSearchComponent implements OnInit {
     this.heroes$ = this.heroes$.pipe(
       tap(it => {
         this.showResults = it.length > 0;
-        console.log(`tap called, and showResults: ${this.showResults}`);
       })
     );
   }
