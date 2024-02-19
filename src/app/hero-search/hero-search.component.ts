@@ -1,7 +1,7 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Observable, Subject, debounceTime, distinctUntilChanged, map, of, switchMap } from 'rxjs';
+import { Observable, Subject, debounceTime, distinctUntilChanged, of, switchMap, tap } from 'rxjs';
 import { Hero } from '../hero';
 import { HeroService } from '../service/hero.service';
 
@@ -13,8 +13,8 @@ import { HeroService } from '../service/hero.service';
   styleUrl: './hero-search.component.sass'
 })
 export class HeroSearchComponent implements OnInit {
-  heroes$!: Observable<Hero[]>;
-  isSearchInputPresent$!: Observable<boolean>;
+  heroes$: Observable<Hero[]> = of();
+  showResults = false;
   private searchTerms = new Subject<string>();
 
   constructor(private heroService: HeroService) { }
@@ -39,14 +39,10 @@ export class HeroSearchComponent implements OnInit {
         }),
       );
 
-    this.isSearchInputPresent$ = this.heroes$.pipe(
-      switchMap(heroes => {
-        if (heroes.length === 0) {
-          console.log(`isSearchInputPresent$: false`);
-          return of(false);
-        }
-        console.log(`isSearchInputPresent$: true`);
-        return of(true);
+    this.heroes$ = this.heroes$.pipe(
+      tap(it => {
+        this.showResults = it.length > 0;
+        console.log(`tap called, and showResults: ${this.showResults}`);
       })
     );
   }

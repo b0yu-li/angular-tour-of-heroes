@@ -1,6 +1,8 @@
 ## 02-19
 - [x] decorate search pop-over in an un-detailed fashion
-- [ ] conditionally show search result
+- [x] conditionally show search result
+    - took me a long time
+    - solution: 1. [class.hidden]="!showResults" over *ngIf; 2. tap Observerble to
 - [ ] fix: search result should overlay heroes tab
 - [ ] search result hover effect
 - [ ] search result after clicking: clear search input
